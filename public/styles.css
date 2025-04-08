@@ -1,0 +1,147 @@
+
+body {
+    background-color: #2f2f2f;
+    color: #f1f1f1; 
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+  header {
+    background-color: #1d1c1c;
+    display: flex;
+    padding-top:1em ;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  ul {
+    display: flex;
+    justify-content: center;
+    width: 100%; 
+    padding: 0;
+}
+
+  li{
+    padding: 0.5em 1em;
+    list-style: none;
+  }
+  li:hover{
+    background-color: #3f3f3f;
+    border-radius: 5px;
+}
+li:hover a{
+    color: #ffcc00; 
+    text-decoration: underline;
+}
+  nav a {
+    color: #f1f1f1;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+ 
+  
+ 
+  main {
+    padding: 2em;
+  }
+  
+
+  form {
+    background-color: #3d3d3d;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  form div {
+    margin-bottom: 15px;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    color: #f1f1f1;
+  }
+  
+  form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #2f2f2f;
+    border: 1px solid #444;
+    color: #f1f1f1;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  form button {
+    background-color: #ffcc00;
+    color: #1d1c1c;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  form button:hover {
+    background-color: #e6b800;
+  }
+
+    section {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    article {
+      background-color: #3d3d3d;
+      border-radius: 5px;
+      padding: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  section p {
+    margin: 10px 0;
+  }
+
+  section a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Enlaces generales */
+  a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  
+  .message-details {
+    background-color: #3d3d3d;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.message-user {
+    font-weight: bold;
+    color: #f1f1f1;
+    font-size: 1.2em;
+}
+
+.message-text {
+    color: #f1f1f1;
+    font-size: 1.2em;
+}
+
+.message-date {
+    color: #b3b3b3;
+    font-size: 0.9em;
+}

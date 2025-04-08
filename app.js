@@ -16,6 +16,9 @@ app.set("views", path.join(__dirname, "views"));
 // Configura EJS como motor de plantillas
 app.set("view engine", "ejs");
 
+// Establece la ruta de la carpeta 'public' donde se encuentran los archivos estáticos, esto permite que los usuarios puedan acceder a archivos como imágenes, CSS y JS
+const assetsPath = path.join(__dirname, "public");
+app.use(express.static(assetsPath));
 
 app.use("/new", newMessageRouter)  
 app.use("/", indexRouter)  
