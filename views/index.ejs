@@ -1,24 +1,24 @@
 <html>
   <head>
     <title>Mini Message Board</title>
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
     <header>
       <h1>Mini Message Board</h1>
       <%- include('navbar', { links: links }) %>
     </header>
-    <main>        
+    <main>
       <section>
         <% messages.forEach((message, index) => { %>
-          <article class="message-card">
-            <div class="message-content">
-              <p class="message-user"><%= message.user %> said:</p>
-              <p class="message-text"><%= message.text %></p>
-              <p class="message-date"><%= message.added.toLocaleString() %></p>
-            </div>
-            <a href="/<%= index %>" class="message-link">See message</a>
-          </article>
+        <article class="message-card">
+          <div class="message-content">
+            <p class="message-user"><%= message.user %> said:</p>
+            <p class="message-text"><%= message.text %></p>
+            <p class="message-date"><%= message.added.toLocaleString() %></p>
+          </div>
+          <a href="/<%= index %>" class="message-link">See message</a>
+        </article>
         <% }); %>
       </section>
     </main>

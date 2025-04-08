@@ -1,14 +1,14 @@
 <html>
   <head>
     <title>Mini Message Board</title>
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
     <header>
       <h1>Mini Message Board</h1>
       <%- include('navbar', { links: links }) %>
     </header>
-    <main>        
+    <main>
       <section class="message-details">
         <p class="message-user"><%= message.user %> said:</p>
         <p class="message-text"><%= message.text %></p>
