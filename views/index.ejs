@@ -9,11 +9,14 @@
     </header>
     <main>        
       <section>
-        <% messages.forEach((message) => { %>
+        <% messages.forEach((message, index) => { %>
           <article>
-                <p><%= message.user %> said:</p>
-                <p><%= message.text %></p>
-                <p><%= message.added.toLocaleString() %></p>
+                <article>
+                  <p><%= message.user %> said:</p>
+                  <p><%= message.text %></p>
+                  <p><%= message.added.toLocaleString() %></p>
+                </article>
+                <a href="/<%=index %>">See message</a>
           </article>
         <% }); %>
       </section>
