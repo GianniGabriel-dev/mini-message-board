@@ -9,7 +9,17 @@
     </header>
     <main>        
       <section>
-        <p>content goes here</p>
+        <form method="POST" action="/new">  
+          <div>
+            <label for="messageUser">Name:</label>
+            <input type="text" name="messageUser" required>
+          </div>
+          <div>
+            <label for="messageText">Message:</label>
+            <textarea id="messageText" name="messageText" required></textarea>
+          </div>
+          <button type="submit">Send</button>
+         </form>
       </section>
     </main>
   </body>
