@@ -23,5 +23,5 @@ app.use(express.static(assetsPath));
 app.use("/new", newMessageRouter);
 app.use("/", indexRouter);
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT); // Inicia el servidor en el puerto 3000
