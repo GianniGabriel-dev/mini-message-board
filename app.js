@@ -24,6 +24,4 @@ app.use("/new", newMessageRouter);
 app.use("/", indexRouter);
 
 const PORT = 3000;
-app.listen(PORT, () => {
-  console.log(`App listening in port ${PORT}`);
-});
+app.listen(PORT); // Inicia el servidor en el puerto 3000

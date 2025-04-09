@@ -17,7 +17,6 @@ const links = [
   { href: "/", text: "Messages" },
   { href: "/new", text: "Add New Message" },
 ];
-console.log(messages.length);
 
 export const indexRouter = Router();
 
