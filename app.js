@@ -24,4 +24,4 @@ app.use("/new", newMessageRouter);
 app.use("/", indexRouter);
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT); // Inicia el servidor en el puerto 3000
+app.listen(PORT,'0.0.0.0'); // escucha todas las interfaces de red disponibles en el puerto 3000 o el puerto definido en la variable de entorno PORT
