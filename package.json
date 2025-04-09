@@ -11,6 +11,9 @@
   "author": "Gianni Gabriel Clondireanu",
   "license": "ISC",
   "description": "",
+  "engines": {
+    "node": ">=18"
+  },
   "dependencies": {
     "ejs": "^3.1.10",
     "express": "^5.1.0"

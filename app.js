@@ -8,6 +8,7 @@ import path from "node:path";
 const app = express();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+const PORT = process.env.PORT || 3000; // Establece el puerto en el que se ejecutará la aplicación, si no está definido en las variables de entorno, usará el puerto 3000
 
 app.use(express.urlencoded({ extended: true })); // Middleware para parsear el body de las peticiones POST
 
@@ -23,5 +24,7 @@ app.use(express.static(assetsPath));
 app.use("/new", newMessageRouter);
 app.use("/", indexRouter);
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT,'0.0.0.0'); // escucha todas las interfaces de red disponibles en el puerto 3000 o el puerto definido en la variable de entorno PORT
+//Se inicia el servidor
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`); // Mensaje en la consola indicando que el servidor está corriendo
+})
