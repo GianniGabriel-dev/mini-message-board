@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "main": "app.js",
   "type": "module",
-  
   "scripts": {
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,5 +10,8 @@
   "keywords": [],
   "author": "Gianni Gabriel Clondireanu",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
 }
