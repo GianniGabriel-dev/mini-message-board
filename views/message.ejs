@@ -10,9 +10,9 @@
     </header>
     <main>
       <section class="message-details">
-        <p class="message-user"><%= message.user %> said:</p>
-        <p class="message-text"><%= message.text %></p>
-        <p class="message-date"><%= message.added.toLocaleString() %></p>
+        <p class="message-user"><%= message.sender_name %> said:</p>
+        <p class="message-text"><%= message.message %></p>
+        <p class="message-date"><%= new Date(message.created_at).toLocaleString() %></p>
       </section>
     </main>
   </body>

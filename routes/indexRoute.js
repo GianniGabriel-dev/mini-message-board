@@ -1,18 +1,8 @@
 import Router from "express";
-import { getMessageById } from "../controller/getMessageById.js";
+import { getMessage } from "../controller/getMessageById.js";
+import { getAllMessages, createMessage} from "../db/queries.js"; //imports de la queries sql
 
-const messages = [
-  {
-    text: "Hi there!",
-    user: "Amando",
-    added: new Date(),
-  },
-  {
-    text: "Hello World!",
-    user: "Charles",
-    added: new Date(),
-  },
-];
+
 const links = [
   { href: "/", text: "Messages" },
   { href: "/new", text: "Add New Message" },
@@ -20,15 +10,16 @@ const links = [
 
 export const indexRouter = Router();
 
-indexRouter.get("/", (req, res) => {
+indexRouter.get("/", async(req, res) => {
+  const messages = await getAllMessages(); //obtiene todos los mensajes de la base de datos
   res.render("index", { links: links, messages: messages }); //renderiza index.ejs, le pasa links y los mensajes
 });
 
-indexRouter.post("/new", (req, res) => {
+indexRouter.post("/new", async(req, res) => {
   // desestructura la req post el body de la peticion POST, los valores tienen que coincidir con el name de los input
   const { messageText, messageUser } = req.body;
-  messages.push({ text: messageText, user: messageUser, added: new Date() });
+  createMessage(messageUser, messageText) //crea el mensaje en la base de datos
   res.redirect("/"); //redirecciona a la ruta principal
 });
 
-indexRouter.get("/:id", getMessageById(links, messages)); //obtiene el mensaje por id, el id es el index del array messages
+indexRouter.get("/:id", getMessage(links)); //obtiene el mensaje por id, el id es el index del array messages

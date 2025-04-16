@@ -13,11 +13,11 @@
         <% messages.forEach((message, index) => { %>
         <article class="message-card">
           <div class="message-content">
-            <p class="message-user"><%= message.user %> said:</p>
-            <p class="message-text"><%= message.text %></p>
-            <p class="message-date"><%= message.added.toLocaleString() %></p>
+            <p class="message-user"><%= message.sender_name %> said:</p>
+            <p class="message-text"><%= message.message %></p>
+            <p class="message-date"><%= new Date(message.created_at).toLocaleString()%></p>
           </div>
-          <a href="/<%= index %>" class="message-link">See message</a>
+          <a href="/<%= message.message_id %>" class="message-link">See message</a>
         </article>
         <% }); %>
       </section>

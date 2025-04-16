@@ -1,6 +1,8 @@
-export const getMessageById = (links, messages) => (req, res) => {
+import { getMessageById } from "../db/queries.js";
+
+export const getMessage =  (links) => async(req, res) => {
   const messageId = req.params.id; //obtiene el id del mensaje de la url
-  const message = messages[messageId]; //obtiene el mensaje del array messages
+  const message = await getMessageById(messageId)
   if (!message) {
     return res.status(404).render("not-found", { links });
   }
